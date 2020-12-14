@@ -4,7 +4,7 @@
 	"description": "根据token获取用户信息",
 	"scripts": {
 		"test": "tsc && ava ./tests/*.js",
-		"watch": "tsc -w & ava --watch ./tests/*.js",
+		"dev": "tsc -w & ava --watch ./tests/*.js",
 		"clean": "del-cli ./dist/",
 		"lint": "eslint ./src/**/*.ts",
 		"compile": "tsc",
@@ -40,15 +40,25 @@
 		}
 	],
 	"license": "MIT",
-	"dependencies": {},
+	"dependencies": {
+		"@mmstudio/config": "^1.1.0",
+		"jsonwebtoken": "^8.5.1"
+	},
 	"devDependencies": {
+		"@mmstudio/config": "^1.1.0",
+		"@types/jsonwebtoken": "^8.5.0",
+		"@types/minio": "^7.0.6",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
+		"anylogger": "^1.0.9",
 		"ava": "latest",
 		"del-cli": "latest",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
 		"typescript": "next"
+	},
+	"peerDependencies": {
+		"anylogger": "^1.0.9"
 	}
 }
