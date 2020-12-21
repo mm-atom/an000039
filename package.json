@@ -41,16 +41,14 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"@mmstudio/config": "^1.1.0",
 		"jsonwebtoken": "^8.5.1"
 	},
 	"devDependencies": {
-		"@mmstudio/config": "^1.1.0",
-		"@types/jsonwebtoken": "^8.5.0",
-		"@types/minio": "^7.0.6",
+		"@mmstudio/config": "latest",
+		"@types/jsonwebtoken": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
-		"anylogger": "^1.0.9",
+		"anylogger": "latest",
 		"ava": "latest",
 		"del-cli": "latest",
 		"eslint": "latest",
@@ -59,6 +57,7 @@
 		"typescript": "next"
 	},
 	"peerDependencies": {
+		"@mmstudio/config": "*",
 		"anylogger": "^1.0.9"
 	}
 }
