@@ -9,13 +9,7 @@ const session = config.session as {
 	expiresIn: string | number;
 };
 
-export interface IUserInfo {
-	id: string;
-	userid: string;
-	info: { [key: string]: string; };
-}
-
-export default function get_user<T extends IUserInfo>(token: string) {
+export default function get_user<T>(token: string) {
 	return new Promise<T | null>((res) => {
 		verify(token, session.secret, { algorithms: ['HS256'], complete: false }, (err, decoded) => {
 			if (err) {
