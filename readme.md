@@ -4,11 +4,6 @@
 
 ## 完整的配置文件
 
-```json
-{
-	"session": {
-		"secret": "Mmstudio123",
-		"expiresIn": "30d"
-	}
-}
+```conf
+SESSION_SECRET=mmstudio
 ```

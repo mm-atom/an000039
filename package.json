@@ -9,7 +9,8 @@
 		"lint": "eslint ./src/**/*.ts",
 		"compile": "tsc",
 		"build": "npm run clean && npm run lint && npm run compile",
-		"up": "git pull git@github.com:mm-core/base.git cjs"
+		"up": "git pull git@github.com:mm-core/base.git cjs",
+		"release": "yarn build && standard-version && git push --follow-tags origin main && npm publish"
 	},
 	"repository": {
 		"type": "https+git",
@@ -44,7 +45,7 @@
 		"jsonwebtoken": "^8.5.1"
 	},
 	"devDependencies": {
-		"@mmstudio/config": "latest",
+		"@next/env": "latest",
 		"@types/jsonwebtoken": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
@@ -54,10 +55,11 @@
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
+		"standard-version": "latest",
 		"typescript": "next"
 	},
 	"peerDependencies": {
-		"@mmstudio/config": "*",
-		"anylogger": "^1.0.9"
+		"@next/env": "*",
+		"anylogger": "*"
 	}
 }

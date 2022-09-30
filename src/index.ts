@@ -1,17 +1,15 @@
 import { verify } from 'jsonwebtoken';
-import config from '@mmstudio/config';
 import anylogger from 'anylogger';
 
 const logger = anylogger('@mmstudio/an000039');
 
-const session = config.session as {
-	secret: string;
-	expiresIn: string | number;
-};
-
 export default function get_user<T>(token: string) {
 	return new Promise<T | null>((res) => {
-		verify(token, session.secret, { algorithms: ['HS256'], complete: false }, (err, decoded) => {
+		const secret = process.env.SESSION_SECRET!;
+		verify(token, secret, {
+			algorithms: ['HS256'],
+			complete: false
+		}, (err, decoded) => {
 			if (err) {
 				logger.error('failed verify token:', token, 'resion:', err.message);
 				res(null);
