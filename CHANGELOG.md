@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/mm-atom/an000039/compare/v1.2.0...v1.2.1) (2022-09-30)
+
+
+### Bug Fixes
+
+* add config ([639adf5](https://github.com/mm-atom/an000039/commit/639adf53cc0575667558c6a16fbc3434c300d5e4))
+
 ## 1.2.0 (2022-09-30)
 
 
